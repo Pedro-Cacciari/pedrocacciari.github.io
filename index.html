@@ -1,45 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Group</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Group</title>
+  <style>
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    nav {
+      width: 20%;
+      background-color: #f4f4f4;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      height: 100vh;
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-bottom: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main {
+      width: 80%;
+      padding: 20px;
+    }
+
+    .member, .topic {
+      background-color: #fff;
+      padding: 15px;
+     ;
+      border-radius: 5px;
+    }
+
+    .member h3, .topic h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .member .degree, .topic .degree {
+      font-weight: normal;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .member .period, .topic .period {
+      font-style: italic;
+      color: #777;
+      margin: 5px 0;
+    }
+
+    .member .project, .topic .project {
+      margin: 0;
+    }
+
+    .topic {
+      display: flex;
+      align-items: center;
+    }
+
+    .topic img {
+      width: 150px;
+      height: 150px;
+      margin-right: 20px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Research Group</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#members">Members</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        advancing knowledge in our field.</p>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#members">Members</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#topics">Research Topics</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Our Research Group</h2>
+      <p>Advancing knowledge in our field.</p>
     </section>
+
     <section id="about">
-        <h2>About</h2>
-        <p>Our research group focuses on innovative studies in various domains. We aim to make significant contributions to science and technology.</p>
+      <h2>About</h2>
+      <p>Our research group focuses on innovative studies in various domains. We aim to make significant contributions to science and technology.</p>
     </section>
 
     <section id="members">
       <h2>Members</h2>
-    
+
       <div class="member">
         <h3>Lorenzo Zafrilla <span class="degree">(M.Sc.)</span></h3>
         <p class="period">2023–present</p>
         <p class="project">Water flow in fractured rock masses via 3D-printed DFN models</p>
       </div>
-    
+
       <div class="member">
         <h3>Lorenzo Zafrilla <span class="degree">(M.Sc.)</span></h3>
         <p class="period">2023–present</p>
         <p class="project">Water flow in fractured rock masses via 3D-printed DFN models</p>
       </div>
-    
+
       <div class="member">
         <h3>Lorenzo Zafrilla <span class="degree">(M.Sc.)</span></h3>
         <p class="period">2023–present</p>
@@ -47,22 +128,68 @@
       </div>
     </section>
 
-
-    </section>
     <section id="projects">
-        <h2>Projects</h2>
-        <p>Explore our ongoing and completed projects.</p>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Smart Agriculture</strong> – Using AI to optimize crop yields. (2023–2025)</li>
+        <li><strong>Urban Mobility</strong> – Modeling traffic flow with machine learning. (2022–2024)</li>
+        <li><strong>AI for Health</strong> – Predictive models for early disease detection. (2024–2026)</li>
+      </ul>
     </section>
+
     <section id="publications">
-        <h2>Publications</h2>
-        <p>Read our latest publications and research papers.</p>
+      <h2>Publications</h2>
+      <p>Read our latest publications and research papers.</p>
     </section>
+
+    <section id="topics">
+      <h2>Research Topics</h2>
+
+      <div class="topic">
+        <img src="https://via.placeholder.com/150" alt="Artificial Intelligence">
+        <div class="topic-content">
+          <h3>Artificial Intelligence</h3>
+          <p>Machine learning, deep learning, and intelligent systems.</p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <img src="https://via.placeholder.com/150" alt="Data Science">
+        <div class="topic-content">
+          <h3>Data Science</h3>
+          <p>Big data analytics, data visualization, and statistical modeling.</p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <img src="https://via.placeholder.com/150" alt="Human-Computer Interaction">
+        <div class="topic-content">
+          <h3>Human-Computer Interaction</h3>
+          <p>Usability, accessibility, and user experience design.</p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <img src="https://via.placeholder.com/150" alt="Robotics">
+        <div class="topic-content">
+          <h3>Robotics</h3>
+          <p>Autonomous systems, sensors, and control algorithms.</p>
+        </div>
+      </div>
+
+      <div class="topic">
+        <img src="https://via.placeholder.com/150" alt="Computational Biology">
+        <div class="topic-content">
+          <h3>Computational Biology</h3>
+          <p>Bioinformatics, genomics, and systems biology.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch with us for more information.</p>
+      <h2>Contact</h2>
+      <p>Get in touch with us for more information.</p>
     </section>
-    <footer>
-        <p>&copy; 2023 Research Group. All rights reserved.</p>
-    </footer>
+  </main>
 </body>
 </html>
