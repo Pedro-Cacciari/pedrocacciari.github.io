@@ -34,6 +34,7 @@
       text-decoration: none;
       color: #333;
       font-weight: bold;
+      cursor: pointer;
     }
 
     main {
@@ -41,10 +42,18 @@
       padding: 20px;
     }
 
-    .member, .topic {
+    section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
       background-color: #fff;
       padding: 15px;
-     ;
+      margin-bottom: 15px;
+      border-left: 4px solid #4CAF50;
       border-radius: 5px;
     }
 
@@ -85,42 +94,29 @@
 <body>
   <nav>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#members">Members</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#topics">Research Topics</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a onclick="showSection('home')">Home</a></li>
+      <li><a onclick="showSection('about')">About</a></li>
+      <li><a onclick="showSection('members')">Members</a></li>
+      <li><a onclick="showSection('projects')">Projects</a></li>
+      <li><a onclick="showSection('publications')">Publications</a></li>
+      <li><a onclick="showSection('topics')">Research Topics</a></li>
+      <li><a onclick="showSection('contact')">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-    <section id="home">
+    <section id="home" class="active">
       <h2>Welcome to Our Research Group</h2>
-      <p>Advancing knowledge in our field.</p>
+      <p>Advancing knowledge in our field through innovative research and collaboration.</p>
     </section>
 
     <section id="about">
       <h2>About</h2>
-      <p>Our research group focuses on innovative studies in various domains. We aim to make significant contributions to science and technology.</p>
+      <p><strong>Pedro Cacciari</strong> is a core member of our research group, contributing to the development of advanced methodologies in geosciences and computational modeling. His work bridges theoretical research and practical applications in environmental systems.</p>
     </section>
 
     <section id="members">
       <h2>Members</h2>
-
-      <div class="member">
-        <h3>Lorenzo Zafrilla <span class="degree">(M.Sc.)</span></h3>
-        <p class="period">2023–present</p>
-        <p class="project">Water flow in fractured rock masses via 3D-printed DFN models</p>
-      </div>
-
-      <div class="member">
-        <h3>Lorenzo Zafrilla <span class="degree">(M.Sc.)</span></h3>
-        <p class="period">2023–present</p>
-        <p class="project">Water flow in fractured rock masses via 3D-printed DFN models</p>
-      </div>
-
       <div class="member">
         <h3>Lorenzo Zafrilla <span class="degree">(M.Sc.)</span></h3>
         <p class="period">2023–present</p>
@@ -144,44 +140,11 @@
 
     <section id="topics">
       <h2>Research Topics</h2>
-
       <div class="topic">
         <img src="https://via.placeholder.com/150" alt="Artificial Intelligence">
         <div class="topic-content">
           <h3>Artificial Intelligence</h3>
           <p>Machine learning, deep learning, and intelligent systems.</p>
-        </div>
-      </div>
-
-      <div class="topic">
-        <img src="https://via.placeholder.com/150" alt="Data Science">
-        <div class="topic-content">
-          <h3>Data Science</h3>
-          <p>Big data analytics, data visualization, and statistical modeling.</p>
-        </div>
-      </div>
-
-      <div class="topic">
-        <img src="https://via.placeholder.com/150" alt="Human-Computer Interaction">
-        <div class="topic-content">
-          <h3>Human-Computer Interaction</h3>
-          <p>Usability, accessibility, and user experience design.</p>
-        </div>
-      </div>
-
-      <div class="topic">
-        <img src="https://via.placeholder.com/150" alt="Robotics">
-        <div class="topic-content">
-          <h3>Robotics</h3>
-          <p>Autonomous systems, sensors, and control algorithms.</p>
-        </div>
-      </div>
-
-      <div class="topic">
-        <img src="https://via.placeholder.com/150" alt="Computational Biology">
-        <div class="topic-content">
-          <h3>Computational Biology</h3>
-          <p>Bioinformatics, genomics, and systems biology.</p>
         </div>
       </div>
     </section>
@@ -191,5 +154,15 @@
       <p>Get in touch with us for more information.</p>
     </section>
   </main>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
