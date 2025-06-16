@@ -42,14 +42,7 @@
       padding: 20px;
     }
 
-    section {
-      display: none;
-    }
-
-    .active {
-      display: block;
-    }
-
+    .member, .topic {
       background-color: #fff;
       padding: 15px;
       margin-bottom: 15px;
@@ -91,7 +84,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="showSection('home')">
   <nav>
     <ul>
       <li><a onclick="showSection('home')">Home</a></li>
@@ -157,7 +150,7 @@
 
   <script>
     function showSection(sectionId) {
-      const sections = document.querySelectorAll('section');
+      const sections = document.querySelectorAll('main section');
       sections.forEach(section => {
         section.classList.remove('active');
       });
