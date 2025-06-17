@@ -95,21 +95,19 @@
 <body>
   <nav>
     <ul>
-      <li><a onclick="showSection('home')">Home</a></li>
-      <li><a onclick="showSection('about')">About</a></li>
+      <li><a onclick="showSection('about GRMM')">About GRMM</a></li>
+      <li><a onclick="showSection('reserach')">Reserach</a></li>
       <li><a onclick="showSection('members')">Members</a></li>
-      <li><a onclick="showSection('projects')">Projects</a></li>
       <li><a onclick="showSection('publications')">Publications</a></li>
-      <li><a onclick="showSection('topics')">Research Topics</a></li>
-      <li><a onclick="showSection('contact')">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-<section id="home">
+<section id="about GRMM">
   <h2>Welcome to the Geomechanics & Rock Mass Modeling (GRMM) research group</h2>
+  <h2>Polytechnique Montréal</h2>
 
-  <p>Our group, based at Polytechnique Montréal, conducts research and consulting projects in geomechanics, with a focus on experimental rock mechanics and discontinuous rock mass modeling applied to rock excavation stability and fluid flow in fractured media.</p>
+  <p>Our group conducts research and consulting projects in geomechanics, with a focus on experimental rock mechanics and discontinuous rock mass modeling applied to rock excavation stability and fluid flow in fractured media.</p>
 
   <p>Our main areas of expertise include:</p>
   <ul>
@@ -123,10 +121,16 @@
   </ul>
 </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p><strong>Pedro Cacciari</strong> is a core member of our research group, contributing to the development of advanced methodologies in geosciences and computational modeling. His work bridges theoretical research and practical applications in environmental systems.</p>
-    </section>
+<section id="research">
+  <h2>Research highlights</h2>
+  <ul>
+    <li><strong>DFN modeling and anisotropic rock mass behavior</strong> – Using DFN-DEM to assess the mechanical behavior of anisotropic rock masses and enhance the stability analysis of rock excavations.</li>
+    
+    <li><strong>DFN modeling and fluid flow</strong> – Using DFN modeling to improve water flow analysis in fractured rock masses. We develop new DFN-based tools to assess rock mass permeability, evaluate infiltration potential in tunnels, and design optimized pipe network models tailored to specific engineering challenges.</li>
+    
+    <li><strong>Laboratory testing using 3D-printed rock masses</strong> – We develop methods to print DFNs within synthetic materials. These physical models are used to validate numerical and analytical approaches and to improve water flow solutions applied in rock engineering</li>
+  </ul>
+  </section>
 
 <section id="members">
   <h2>Members</h2>
@@ -164,37 +168,10 @@
   </div>
 </section>
 
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Smart Agriculture</strong> – Using AI to optimize crop yields. (2023–2025)</li>
-        <li><strong>Urban Mobility</strong> – Modeling traffic flow with machine learning. (2022–2024)</li>
-        <li><strong>AI for Health</strong> – Predictive models for early disease detection. (2024–2026)</li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-      <p>Read our latest publications and research papers.</p>
-    </section>
-
-    <section id="topics">
-      <h2>Research Topics</h2>
-      <div class="topic">
-        <img src="https://via.placeholder.com/150" alt="Artificial Intelligence">
-        <div class="topic-content">
-          <h3>Artificial Intelligence</h3>
-          <p>Machine learning, deep learning, and intelligent systems.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Get in touch with us for more information.</p>
-    </section>
-  </main>
+<section id="publications">
+  <h2>Publications</h2>
+  <p>Read our latest publications and research papers.</p>
+</section>
 
   <script>
     function showSection(sectionId) {
@@ -205,9 +182,9 @@
       document.getElementById(sectionId).classList.add('active');
     }
 
-    // Mostra a seção "home" assim que o DOM estiver carregado
+    // Mostra a seção "about GRMM" assim que o DOM estiver carregado
     window.addEventListener('DOMContentLoaded', () => {
-      showSection('home');
+      showSection('about GRMM');
     });
   </script>
 </body>
