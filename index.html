@@ -90,25 +90,27 @@
     main section.active {
       display: block;
     }
+    
     #research {
     padding: 2rem 0;
     }
     
     .research-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
+    display: flex; /* Coloca imagem e texto lado a lado */
+    align-items: flex-start; /* Alinha o topo da imagem com o topo do texto */
+    margin-bottom: 20px; /* Espaço entre os itens */
     }
     
     .research-item img {
-      width: 300px; /* This sets the image width */
-      height: auto; /* Maintains aspect ratio */
-      margin-right: 15px; /* Adds space between image and text */
+      width: 100px; /* Tamanho da imagem, ajustável */
+      height: auto;
+      margin-right: 20px; /* Espaço entre imagem e texto */
     }
-    .research-item p {
-      flex: 1;
-      margin: 0;
+    
+    .research-text p {
+      margin: 10px 0; /* Espaço entre as linhas de texto */
     }
+
   </style>
 </head>
 <body>
