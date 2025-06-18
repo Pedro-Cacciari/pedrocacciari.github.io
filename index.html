@@ -145,19 +145,38 @@
   }
 
   .about-section {
-    background-image: url('about-bg.jpg'); /* Caminho da imagem */
-    background-size: cover; /* Faz a imagem preencher a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição */
-    padding: 60px 40px; /* Espaçamento interno confortável */
-    color: white; /* Texto branco para contraste */
     position: relative;
+    padding: 60px 40px;
+    color: white;
+    overflow: hidden;
   }
   
-  /* Opcional: adicionar uma sombra no texto para legibilidade */
+  /* Imagem de fundo com camada escura translúcida */
+  .about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('about-bg.jpg'); /* Substitua pelo nome correto */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* controla a transparência da imagem */
+    z-index: 0;
+  }
+  
+  /* Garante que o conteúdo fique acima da imagem de fundo */
+  .about-section * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Aplica sombra no texto para melhor leitura */
   .about-section h2,
   .about-section p,
-  .about-section li {
+  .about-section ul li {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   }
 
