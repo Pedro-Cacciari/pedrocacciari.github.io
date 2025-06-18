@@ -91,25 +91,35 @@
       display: block;
     }
     
-    #research {
-    padding: 2rem 0;
-    }
-    
-    .research-item {
-    display: flex; /* Coloca imagem e texto lado a lado */
-    align-items: flex-start; /* Alinha o topo da imagem com o topo do texto */
-    margin-bottom: 20px; /* Espaço entre os itens */
-    }
-    
-    .research-item img {
-      width: 100px; /* Tamanho da imagem, ajustável */
-      height: auto;
-      margin-right: 20px; /* Espaço entre imagem e texto */
-    }
-    
-    .research-text p {
-      margin: 10px 0; /* Espaço entre as linhas de texto */
-    }
+  /* Estilo geral para a seção de pesquisa */
+  #research {
+    padding: 2rem 0; /* Adiciona um espaçamento de 2rem acima e abaixo da seção */
+  }
+  
+  /* Cada item de pesquisa (imagem + texto) */
+  .research-item {
+    display: flex; /* Ativa o modelo flexbox para colocar a imagem e o texto lado a lado */
+    align-items: flex-start; /* Alinha o topo da imagem com o topo do conteúdo de texto */
+    margin-bottom: 20px; /* Espaço entre cada item de pesquisa */
+  }
+  
+  /* Estilo da imagem ao lado do texto */
+  .research-item img {
+    width: 100px; /* Define a largura fixa da imagem (pode ser ajustado conforme necessidade) */
+    height: auto; /* Mantém a proporção original da imagem */
+    margin-right: 20px; /* Adiciona espaço entre a imagem e o texto */
+  }
+  
+  /* Container para o texto à direita da imagem */
+  .research-text {
+    display: flex; /* Ativa o modelo flexbox também para o conteúdo textual */
+    flex-direction: column; /* Garante que os parágrafos apareçam empilhados verticalmente */
+  }
+  
+  /* Estilo individual de cada parágrafo dentro do texto */
+  .research-text p {
+    margin: 10px 0; /* Adiciona espaço vertical entre os parágrafos (10px em cima e embaixo) */
+  }
 
   </style>
 </head>
