@@ -144,7 +144,25 @@
     margin: 10px 0; /* Adiciona espaço vertical entre os parágrafos (10px em cima e embaixo) */
   }
 
+  .about-section {
+    background-image: url('about-bg.jpg'); /* Caminho da imagem */
+    background-size: cover; /* Faz a imagem preencher a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    padding: 60px 40px; /* Espaçamento interno confortável */
+    color: white; /* Texto branco para contraste */
+    position: relative;
+  }
+  
+  /* Opcional: adicionar uma sombra no texto para legibilidade */
+  .about-section h2,
+  .about-section p,
+  .about-section li {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+
   </style>
+  
 </head>
 <body>
   <nav>
@@ -157,8 +175,8 @@
     </ul>
   </nav>
 
-  <main>
-<section id="about GRMM">
+<main>
+<section id="about GRMM" class="about-section">
   <h2>Welcome to the Geomechanics & Rock Mass Modeling (GRMM) research group</h2>
   <h2>Polytechnique Montréal</h2>
 
