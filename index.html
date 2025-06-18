@@ -90,6 +90,27 @@
     main section.active {
       display: block;
     }
+    #research {
+    padding: 2rem 0;
+    }
+    
+    .research-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    
+    .research-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-right: 1rem;
+      border-radius: 8px;
+    }
+    .research-item p {
+      flex: 1;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -121,18 +142,25 @@
     <li>Stability analysis of rock excavations using deterministic and probabilistic methods</li>
   </ul>
 </section>
-
 <section id="research">
   <h2>Research highlights</h2>
-  <ul>
-    <li><strong>DFN modeling and anisotropic rock mass behavior</strong> – Using DFN-DEM to assess the mechanical behavior of anisotropic rock masses and enhance the stability analysis of rock excavations.</li>
-    
-    <li><strong>DFN modeling and fluid flow</strong> – Using DFN modeling to improve water flow analysis in fractured rock masses. We develop new DFN-based tools to assess rock mass permeability, evaluate infiltration potential in tunnels, and design optimized pipe network models tailored to specific engineering challenges.</li>
-    
-    <li><strong>Laboratory testing using 3D-printed rock masses</strong> – We develop methods to print DFNs within synthetic materials. These physical models are used to validate numerical and analytical approaches and to improve water flow solutions applied in rock engineering</li>
-  </ul>
-  </section>
 
+  <div class="research-item">
+    <img src="dfn-mechanical.png" alt="DFN mechanical behavior" />
+    <p><strong>DFN modeling and anisotropic rock mass behavior</strong> – Using DFN-DEM to assess the mechanical behavior of anisotropic rock masses and enhance the stability analysis of rock excavations.</p>
+  </div>
+
+  <div class="research-item">
+    <img src="dfn-fluid.png" alt="DFN fluid flow" />
+    <p><strong>DFN modeling and fluid flow</strong> – Using DFN modeling to improve water flow analysis in fractured rock masses. We develop new DFN-based tools to assess rock mass permeability, evaluate infiltration potential in tunnels, and design optimized pipe network models tailored to specific engineering challenges.</p>
+  </div>
+
+  <div class="research-item">
+    <img src="lab-printed.png" alt="3D printed rocks" />
+    <p><strong>Laboratory testing using 3D-printed rock masses</strong> – We develop methods to print DFNs within synthetic materials. These physical models are used to validate numerical and analytical approaches and to improve water flow solutions applied in rock engineering.</p>
+  </div>
+</section>
+    
 <section id="members">
   <h2>Members</h2>
 
