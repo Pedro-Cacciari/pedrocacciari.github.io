@@ -5,91 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Research Group</title>
   <style>
-    body {
-      display: flex;
-      font-family: Georgia, serif;
-      margin: 0;
-    }
-
-    nav {
-      width: 20%;
-      background-color: #f4f4f4;
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-      height: 100vh;
-      position: sticky;
-      top: 0;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin-bottom: 10px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    main {
-      width: 80%;
-      padding: 20px;
-    }
-
-    .member, .topic {
-      background-color: #fff;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-left: 4px solid #4CAF50;
-      border-radius: 5px;
-    }
-
-    .member h3, .topic h3 {
-      margin: 0;
-      font-size: 1.2em;
-    }
-
-    .member .degree, .topic .degree {
-      font-weight: normal;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    .member .period, .topic .period {
-      font-style: italic;
-      color: #777;
-      margin: 5px 0;
-    }
-
-    .member .project, .topic .project {
-      margin: 0;
-    }
-
-    .topic {
-      display: flex;
-      align-items: center;
-    }
-
-    .topic img {
-      width: 150px;
-      height: 150px;
-      margin-right: 20px;
-      border-radius: 5px;
-    }
-
-    main section {
-      display: none;
-    }
-
-    main section.active {
-      display: block;
-    }
+    
+  /* Define o estilo global do corpo da página */
+  body {
+    display: flex; /* Usa flexbox para colocar o menu lateral (nav) e o conteúdo principal (main) lado a lado */
+    font-family: Georgia, serif; /* Define a fonte principal do site */
+    margin: 0; /* Remove a margem padrão do navegador em torno da página */
+  }
+  
+  /* Estilo do menu de navegação lateral */
+  nav {
+    width: 20%; /* Ocupa 20% da largura da janela */
+    background-color: #f4f4f4; /* Cor de fundo clara para o menu */
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra sutil à direita do menu para dar profundidade */
+    height: 100vh; /* Altura total da janela de visualização (viewport height) */
+    position: sticky; /* Fixa o menu na tela quando se faz scroll */
+    top: 0; /* A posição sticky começa do topo da página */
+  }
+  
+  /* Remove os estilos padrão da lista no menu */
+  nav ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o espaçamento interno da lista */
+  }
+  
+  /* Espaço entre os itens da lista do menu */
+  nav ul li {
+    margin-bottom: 10px; /* Adiciona espaçamento entre os itens do menu */
+  }
+  
+  /* Estilo dos links do menu */
+  nav ul li a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #333; /* Cor do texto (cinza escuro) */
+    font-weight: bold; /* Deixa os links em negrito */
+    cursor: pointer; /* Altera o cursor ao passar por cima dos links */
+  }
+  
+  /* Estilo da área principal da página */
+  main {
+    width: 80%; /* Ocupa os 80% restantes da largura da tela */
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo */
+  }
+  
+  /* Estilo das caixas de informações (ex: membros ou tópicos) */
+  .member, .topic {
+    background-color: #fff; /* Fundo branco */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço entre cada bloco de conteúdo */
+    border-left: 4px solid #4CAF50; /* Borda verde à esquerda como destaque */
+    border-radius: 5px; /* Cantos levemente arredondados */
+  }
+  
+  /* Estilo do título (nome ou tema) nas caixas */
+  .member h3, .topic h3 {
+    margin: 0; /* Remove margens padrão */
+    font-size: 1.2em; /* Tamanho da fonte aumentado */
+  }
+  
+  /* Estilo da formação acadêmica ou grau */
+  .member .degree, .topic .degree {
+    font-weight: normal; /* Texto normal (não em negrito) */
+    font-size: 0.9em; /* Tamanho da fonte ligeiramente menor */
+    color: #555; /* Cinza médio */
+  }
+  
+  /* Estilo do período de participação ou duração */
+  .member .period, .topic .period {
+    font-style: italic; /* Texto em itálico */
+    color: #777; /* Cinza claro */
+    margin: 5px 0; /* Pequeno espaço acima e abaixo */
+  }
+  
+  /* Estilo do parágrafo que descreve o projeto */
+  .member .project, .topic .project {
+    margin: 0; /* Remove margens padrão */
+  }
+  
+  /* Layout horizontal para os itens do tipo .topic (imagem + texto) */
+  .topic {
+    display: flex; /* Ativa layout flex para alinhar elementos horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+  
+  /* Estilo das imagens dentro de .topic */
+  .topic img {
+    width: 150px; /* Largura fixa da imagem */
+    height: 150px; /* Altura fixa da imagem */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    border-radius: 5px; /* Canto levemente arredondado na imagem */
+  }
+  
+  /* Por padrão, esconde todas as seções do conteúdo principal */
+  main section {
+    display: none; /* Oculta a seção */
+  }
+  
+  /* Exibe apenas a seção ativa */
+  main section.active {
+    display: block; /* Mostra a seção que tiver a classe 'active' */
+  }
     
   /* Estilo geral para a seção de pesquisa */
   #research {
