@@ -69,16 +69,16 @@
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#" onclick="showSection('about-GRMM'); event.preventDefault();">About GRMM</a></li>
-      <li><a href="#" onclick="showSection('research'); event.preventDefault();">Research</a></li>
-      <li><a href="#" onclick="showSection('members'); event.preventDefault();">Members</a></li>
-      <li><a href="#" onclick="showSection('publications'); event.preventDefault();">Publications</a></li>
-      <li><a href="#" onclick="showSection('teaching-material'); event.preventDefault();">Teaching material</a></li>
-    </ul>
-  </nav>
-
+<nav>
+  <ul>
+    <li><a href="#about-GRMM" class="menu-link">About GRMM</a></li>
+    <li><a href="#research" class="menu-link">Research</a></li>
+    <li><a href="#members" class="menu-link">Members</a></li>
+    <li><a href="#publications" class="menu-link">Publications</a></li>
+    <li><a href="#teaching-material" class="menu-link">Teaching material</a></li>
+  </ul>
+</nav>
+  
   <main>
     <section id="about-GRMM" class="about-section">
       <h2>Welcome to the Geomechanics & Rock Mass Modeling (GRMM) research group</h2>
@@ -264,21 +264,31 @@
     </section>
   </main>
 
-  <script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.menu-link');
+    const sections = document.querySelectorAll('main section');
+
     function showSection(sectionId) {
-      const sections = document.querySelectorAll('main section');
       sections.forEach(section => {
-        section.classList.remove('active');
+        section.classList.toggle('active', section.id === sectionId);
       });
-      const sec = document.getElementById(sectionId);
-      if(sec) {
-        sec.classList.add('active');
-      }
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      showSection('about-GRMM');
+    // Exibe a seção inicial
+    showSection('about-GRMM');
+
+    // Adiciona os event listeners para os links
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1); // Remove o #
+        showSection(targetId);
+        // Opcional: Atualizar URL sem reload
+        history.replaceState(null, '', '#' + targetId);
+      });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
