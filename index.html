@@ -1,100 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GRMM Research Group</title>
-  <style>
-    /* Reset e estilos base */
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      display: flex;
-      min-height: 100vh;
-    }
-
-    nav {
-      width: 220px;
-      background-color: #222;
-      color: white;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin-bottom: 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-      display: block;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      background-color: #555;
-    }
-
-    main {
-      flex-grow: 1;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    main section {
-      display: none;
-    }
-
-    main section.active {
-      display: block;
-    }
-
-    /* Estilos para membros, publicações e etc (ajuste conforme necessário) */
-    .member, .publications > div, .research-item {
-      margin-bottom: 20px;
-    }
-
-    .research-item {
-      display: flex;
-      gap: 25px;
-      align-items: flex-start;
-    }
-
-    .research-item img {
-      width: 250px;
-      height: auto;
-      border-radius: 5px;
-    }
-
-    .research-text p {
-      margin: 0 0 10px 0;
-    }
-
-    /* Para o conteúdo dentro de li para alinhar melhor */
-    .degree {
-      font-style: italic;
-      font-weight: normal;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    /* Pequenos ajustes no menu */
-    .menu-link {
-      user-select: none;
-    }
-  </style>
 </head>
 <body>
   <nav>
