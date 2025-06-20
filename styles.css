@@ -37,7 +37,10 @@ nav ul li a {
   padding: 8px 12px;           /* Espaçamento interno para área clicável */
   border-radius: 4px;          /* Bordas arredondadas nos links */
   transition: background-color 0.3s ease; /* Animação suave para mudança de fundo */
+  font-family: 'Merriweather', serif;
 }
+
+
 
 nav ul li a:hover,
 nav ul li a.active {
