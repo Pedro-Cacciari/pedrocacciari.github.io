@@ -4,14 +4,18 @@ body {
   font-family: Georgia, serif;  /* Define a fonte geral do site */
   display: flex;                /* Define layout flexível para o body */
   min-height: 100vh;            /* Altura mínima: 100% da altura da viewport */
+  overflow: hidden;             /* Adicione para controlar overflow vertical */
 }
 
 nav {
   width: 220px;                /* Largura fixa da barra lateral de navegação */
+  height: 100vh;               /* altura fixa: 100% da altura da janela */
   background-color: #222;      /* Cor de fundo (cinza muito escuro) */
   color: white;                /* Cor do texto dentro do menu */
   padding: 20px;               /* Espaçamento interno (espaço entre borda e conteúdo) */
-  box-sizing: border-box;     /* Padding é incluído na largura total */
+  box-sizing: border-box;      /* Padding é incluído na largura total */
+  overflow-y: auto;            /* permite rolar se o conteúdo do nav for maior que a tela */
+  flex-shrink: 0;              /* impede que o nav encolha */
 }
 
 nav ul {
