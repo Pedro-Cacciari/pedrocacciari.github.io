@@ -105,6 +105,8 @@
         </div>
       </div> 
     </section>
+
+    <div id="members-container"></div>
     
     <section id="publications">
       <h2>Publications</h2>
@@ -317,6 +319,14 @@
         showSection(hash);
       }
     });
+  </script>
+  
+  <script>
+    fetch("members.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("members-container").innerHTML = data;
+      });
   </script>
 </body>
 </html>
