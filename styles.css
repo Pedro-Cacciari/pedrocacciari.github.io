@@ -32,13 +32,14 @@ nav ul li {
 nav ul li a {
   color: white;                /* Cor do texto dos links do menu */
   text-decoration: none;       /* Remove sublinhado dos links */
-  font-weight: bold;           /* Texto em negrito */
+  font-weight: normal;           /* Texto sem negrito */
   cursor: pointer;             /* Cursor muda para "mãozinha" ao passar */
   display: block;              /* O link ocupa toda a largura do item */
   padding: 8px 12px;           /* Espaçamento interno para área clicável */
   border-radius: 4px;          /* Bordas arredondadas nos links */
   transition: background-color 0.3s ease; /* Animação suave para mudança de fundo */
   font-family: 'Merriweather', serif;
+  text-transform: uppercase;   /* deixa em MAIÚSCULAS */
 }
 
 
