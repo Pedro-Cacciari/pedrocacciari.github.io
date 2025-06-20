@@ -65,6 +65,16 @@ main section.active {
   margin-bottom: 20px;         /* Espaçamento entre esses blocos */
 }
 
+.member-section-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ddd;
+  color: #222;
+}
+
 .research-item {
   display: flex;               /* Layout flexível para alinhar imagem e texto lado a lado */
   gap: 25px;                  /* Espaçamento entre imagem e texto */
