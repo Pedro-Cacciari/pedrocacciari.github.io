@@ -48,6 +48,8 @@ main {
   flex-grow: 1;                /* Ocupa todo espaço restante horizontal */
   padding: 20px;               /* Espaçamento interno no conteúdo principal */
   box-sizing: border-box;      /* Padding incluso no cálculo de largura */
+  height: 100vh;               /* Faz o main ter altura fixa igual à viewport */
+  overflow-y: auto;            /* Se conteúdo for maior, ativa rolagem vertical */
 }
 
 main section {
