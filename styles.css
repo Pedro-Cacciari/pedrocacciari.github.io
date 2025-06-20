@@ -1,4 +1,5 @@
 /* Reset e estilos base */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 body {
   margin: 0;                    /* Remove a margem padrão do corpo */
   font-family: Georgia, serif;  /* Define a fonte geral do site */
