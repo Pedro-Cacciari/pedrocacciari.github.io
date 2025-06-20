@@ -1,91 +1,89 @@
+/* Reset e estilos base */
+body {
+  margin: 0;                    /* Remove a margem padrão do corpo */
+  font-family: Georgia, serif;  /* Define a fonte geral do site */
+  display: flex;                /* Define layout flexível para o body */
+  min-height: 100vh;            /* Altura mínima: 100% da altura da viewport */
+}
 
-    /* Reset e estilos base */
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      display: flex;
-      min-height: 100vh;
-    }
+nav {
+  width: 220px;                /* Largura fixa da barra lateral de navegação */
+  background-color: #222;      /* Cor de fundo (cinza muito escuro) */
+  color: white;                /* Cor do texto dentro do menu */
+  padding: 20px;               /* Espaçamento interno (espaço entre borda e conteúdo) */
+  box-sizing: border-box;     /* Padding é incluído na largura total */
+}
 
-    nav {
-      width: 220px;
-      background-color: #222;
-      color: white;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+nav ul {
+  list-style: none;            /* Remove os marcadores de lista (bolinhas) */
+  padding: 0;                  /* Remove padding padrão da lista */
+  margin: 0;                   /* Remove margem padrão da lista */
+}
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+nav ul li {
+  margin-bottom: 15px;         /* Espaçamento vertical entre itens da lista */
+}
 
-    nav ul li {
-      margin-bottom: 15px;
-    }
+nav ul li a {
+  color: white;                /* Cor do texto dos links do menu */
+  text-decoration: none;       /* Remove sublinhado dos links */
+  font-weight: bold;           /* Texto em negrito */
+  cursor: pointer;             /* Cursor muda para "mãozinha" ao passar */
+  display: block;              /* O link ocupa toda a largura do item */
+  padding: 8px 12px;           /* Espaçamento interno para área clicável */
+  border-radius: 4px;          /* Bordas arredondadas nos links */
+  transition: background-color 0.3s ease; /* Animação suave para mudança de fundo */
+}
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-      display: block;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #555;      /* Cor de fundo para hover e item ativo (cinza médio) */
+}
 
-    nav ul li a:hover,
-    nav ul li a.active {
-      background-color: #555;
-    }
+main {
+  flex-grow: 1;                /* Ocupa todo espaço restante horizontal */
+  padding: 20px;               /* Espaçamento interno no conteúdo principal */
+  box-sizing: border-box;      /* Padding incluso no cálculo de largura */
+}
 
-    main {
-      flex-grow: 1;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+main section {
+  display: none;               /* Todas as seções estão escondidas inicialmente */
+}
 
-    main section {
-      display: none;
-    }
+main section.active {
+  display: block;              /* Apenas a seção ativa fica visível */
+}
 
-    main section.active {
-      display: block;
-    }
+/* Estilos para membros, publicações e itens de pesquisa */
+.member, .publications > div, .research-item {
+  margin-bottom: 20px;         /* Espaçamento entre esses blocos */
+}
 
-    /* Estilos para membros, publicações e etc (ajuste conforme necessário) */
-    .member, .publications > div, .research-item {
-      margin-bottom: 20px;
-    }
+.research-item {
+  display: flex;               /* Layout flexível para alinhar imagem e texto lado a lado */
+  gap: 25px;                  /* Espaçamento entre imagem e texto */
+  align-items: flex-start;     /* Alinha os itens no topo */
+}
 
-    .research-item {
-      display: flex;
-      gap: 25px;
-      align-items: flex-start;
-    }
+.research-item img {
+  width: 250px;                /* Largura fixa para as imagens dos projetos */
+  height: auto;                /* Altura automática para manter proporção */
+  border-radius: 5px;          /* Bordas arredondadas nas imagens */
+}
 
-    .research-item img {
-      width: 250px;
-      height: auto;
-      border-radius: 5px;
-    }
+.research-text p {
+  margin: 0 0 10px 0;          /* Margem inferior para espaçar parágrafos */
+}
 
-    .research-text p {
-      margin: 0 0 10px 0;
-    }
+/* Estilo para os textos com classe degree (ex: grau acadêmico) */
+.degree {
+  font-style: italic;          /* Texto em itálico */
+  font-weight: normal;         /* Peso normal (não negrito) */
+  font-size: 0.9em;            /* Fonte um pouco menor */
+  color: #555;                 /* Cor cinza para diferenciar do texto padrão */
+}
 
-    /* Para o conteúdo dentro de li para alinhar melhor */
-    .degree {
-      font-style: italic;
-      font-weight: normal;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    /* Pequenos ajustes no menu */
-    .menu-link {
-      user-select: none;
-    }
-  
+/* Pequenos ajustes para os links do menu */
+.menu-link {
+  user-select: none;           /* Impede seleção do texto do link com o mouse */
+}
