@@ -83,7 +83,7 @@ main section.active {
 .research-item {
   display: flex;               /* Layout flexível para alinhar imagem e texto lado a lado */
   gap: 25px;                  /* Espaçamento entre imagem e texto */
-  align-items: flex-start;     /* Alinha os itens no topo */
+  align-items: center;        /* Agora centraliza verticalmente */
 }
 
 .research-item img {
