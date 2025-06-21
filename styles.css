@@ -87,7 +87,7 @@ main section.active {
 }
 
 .research-item img {
-  width: 250px;                /* Largura fixa para as imagens dos projetos */
+  width: 350px;                /* Largura fixa para as imagens dos projetos */
   height: auto;                /* Altura automática para manter proporção */
   border-radius: 5px;          /* Bordas arredondadas nas imagens */
 }
