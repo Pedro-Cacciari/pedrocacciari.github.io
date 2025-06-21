@@ -67,7 +67,7 @@ main section.active {
 
 /* Estilos para membros, publicações e itens de pesquisa */
 .member, .publications > div, .research-item {
-  margin-bottom: 20px;         /* Espaçamento entre esses blocos */
+  margin-bottom: 100px;         /* Espaçamento entre esses blocos */
 }
 
 .member-section-title {
